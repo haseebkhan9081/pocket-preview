@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root { --bg:#141a17; --ink:#e8efe9; --muted:#9fb1a6; --line:#2c3a32; --accent:#A2BD9D; }
+  * { box-sizing: border-box; }
+  body { width: 260px; margin: 0; padding: 12px; font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--ink); }
+  h1 { font-size: 13px; margin: 0 0 2px; }
+  p.sub { font-size: 11px; color: var(--muted); margin: 0 0 10px; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .toggle { font-size: 11px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  button.dev { text-align: left; padding: 8px 10px; border: 1px solid var(--line); background: #0f1512; color: var(--ink); border-radius: 8px; cursor: pointer; font-size: 12px; }
+  button.dev:hover { border-color: var(--accent); }
+  button.dev b { display: block; font-size: 12px; }
+  button.dev span { color: var(--muted); font-size: 10px; }
+  .note { margin-top: 10px; font-size: 10px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <h1>Phone preview</h1>
+  <p class="sub" id="target">Opens this page in a phone-sized window.</p>
+  <div class="row">
+    <label class="toggle"><input type="checkbox" id="landscape"> Landscape</label>
+  </div>
+  <div class="grid" id="devices"></div>
+  <div class="note">Opens a resizable popup window. Great for checking mobile layout.</div>
+  <script src="popup.js"></script>
+</body>
+</html>
